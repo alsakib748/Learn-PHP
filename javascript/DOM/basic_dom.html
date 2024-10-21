@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Data and Time</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        body .js-run{
+            color: darkviolet;
+            text-align: center;
+            width: 960px;
+            height: 500px;
+            margin: 0px auto;
+            margin-top: 20px;
+            background-color: whitesmoke;
+            border-radius: 20px;
+        }
+        button,a,li{ padding: 10px 20px; font-size: 0.9rem; background: lightblue;
+        border: 1 px; border-radius: 10px; border-color: aqua; color: currentcolor; }
+        button,a,li:hover{
+            transition: 0.8s;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="js-run"><br/><br/><br/>
+        <div class="dom">
+            <p id="text"></p>
+            <h1 class="test-class"></h1>
+            <p class="test-class"></p>
+            <!-- <button class="test-class"></button> -->
+
+            <!-- <h2 name="test-name">h2</h2> -->
+            <!-- <p name="test-name">p</p> -->
+            <!-- <button name="test-name">button</button> -->
+
+            <span>First Span</span><br/>
+            <span>Second Span</span><br/>
+            <span>Third Span</span><br/>
+        </div>
+    
+
+        <script>
+            var textData = document.getElementById("text");
+            // textData.innerHTML = "Document Object Model";
+
+            var testData = document.getElementsByClassName("test-class");
+            // testData[0].innerHTML = "Multiple class name";
+            // testData[1].innerHTML = "Multiple Data";
+            // testData[2].innerHTML = "Multiple Class";
+
+            var nameData = document.getElementsByName("test-name");
+            // nameData[0].innerHTML = "h2 manipulated";
+            // nameData[1].innerHTML = "P Manipulated";
+            // nameData[2].innerHTML = "P Manipulated";
+            var msg = "Third Span Manipulated";
+            var tagData = document.getElementsByTagName("span");
+            tagData[2].innerHTML = msg;
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encode/Decode System</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Encode/Decode System</h1>
+        <form action="process.php" method="POST">
+            <label for="key">Encryption Key:</label>
+            <input type="text" id="key" name="key" required>
+            <br><br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <br><br>
+            <input type="radio" id="encode" name="action" value="encode" required>
+            <label for="encode">Encode</label>
+            <input type="radio" id="decode" name="action" value="decode" required>
+            <label for="decode">Decode</label>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        body .js-run{
+            color: darkviolet;
+            text-align: center;
+            width: 960px;
+            height: 500px;
+            margin: 0px auto;
+            margin-top: 20px;
+            background-color: whitesmoke;
+            border-radius: 20px;
+        }
+        button,a,li{ padding: 10px 20px; font-size: 0.9rem; background: lightblue;
+        border: 1 px; border-radius: 10px; border-color: aqua; color: currentcolor; }
+        button,a,li:hover{
+            transition: 0.8s;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="js-run"><br/><br/><br/>
+        <div class="show">
+            <button id="btn" onclick="DOM()">Click Me</button>
+            <button id="vanish" onclick="documentReplace()">Replace</button>
+            <button id="" onclick="replaceContent()">Replace Content</button>
+            <!-- <button id="" onclick="openWindow()">Open Window</button> -->
+            <button onclick="newWindow()">New Window</button>
+
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+
+        <script>
+            // var info = document.cookie;
+            // document.getElementsByTagName('p')[0].innerHTML = info;
+            // document.getElementsByTagName("p")[0].innerHTML = document.cookie;
+            function DOM(){
+                document.getElementsByTagName("p")[0].innerHTML = document.cookie;
+                document.getElementsByTagName("p")[1].innerHTML = document.domain;
+                document.getElementsByTagName("p")[2].innerHTML = document.lastModified;
+                document.getElementsByTagName("p")[3].innerHTML = document.title;
+                document.getElementsByTagName("p")[4].innerHTML = document.URL;
+            }
+            function documentReplace(){
+                document.open("text/html","replace");
+                document.write("<h2>Document Replace Successfully</h2>");
+                document.close();
+            }
+            function replaceContent(){
+                document.open("text/html","replace");
+                document.write("<h2>Al Sakib Ayon</h2>");
+                document.close();
+            } 
+            function openWindow(){
+                var w = window.open();
+                w.document.open();
+                w.document.write("Open a new window");
+                w.document.close();
+            }
+            function newWindow(){
+                var v = window.open();
+                v.document.open();
+                v.document.write("Hello this is sakib");
+                v.document.close();
+            }
+            var tag = document.getElementsByTagName("p");
+            var tagLength = tag.length;
+            // alert(tagLength);
+
+            var totalTag = document.getElementsByTagName("div");
+            var totalTagLength = totalTag.length;
+            alert(totalTagLength);
+        </script>
+    </div>
+</body>
+</html>

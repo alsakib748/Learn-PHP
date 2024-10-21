@@ -1,0 +1,80 @@
+
+body{
+    
+}
+
+#registerFormId{
+    font-size: 1.3rem;
+}
+.text-violet{
+    color:#f17081;
+}
+
+.font-size{
+    font-size:0.9rem;
+}
+
+.container{
+   
+}
+.col-md-9,.col-md-3{
+    padding: 0px;
+}
+.sidenav{
+    background-color:#557A95;
+    height:680px;
+    padding-top:30px;
+}
+.sidenav h1{
+    padding-left: 10px;
+}
+.sidenav ol{
+    background-color:rosybrown;
+}
+.sidenav ol li{
+    list-style:none;
+    border: 1px solid grey;
+    padding:5px;
+    margin: 0px;
+    
+}
+.sidenav ol li a{
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: white;
+}
+.sidenav ol li:hover{
+    background-color: #5CDB95;
+}
+.sidenav ol li a:hover{
+    font-size: 1.5rem;
+}
+.mainContent{
+    background-color: lightgrey;
+    height:680px;
+}
+.content{
+    margin: 0px auto;
+    width: 720px;
+    padding: 10px;
+}
+.search{
+    font-size: 1.3rem;
+    color:black;
+}
+#alphabets{
+    width: 120px;
+    font:bold;
+    color: black;
+    font-size:1.3rem;
+}
+#alphabets option{
+    font-size: 1.3rem;
+}
+.content-text table thead{
+    font-size: 1.6rem;
+}
+.content-text table tbody{
+    font-size: 1.3rem;
+}
+

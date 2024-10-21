@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        .allcontent{
+            text-align: center;
+            width: 960px;
+            height: 500px;
+            margin: 0px auto;
+            margin-top: 20px;
+            border-radius: 20px;
+        }
+        body .js-run{
+            border-radius: 20px;
+            color:indigo;
+            background-color: aliceblue;
+        }
+        .bg-dark{
+            color:hotpink;
+        }
+        .bg-warning{
+            color:cadetblue;
+        }
+        button,a,li{ padding: 10px 20px; font-size: 0.9rem; background: lightblue;
+        border: 1 px; border-radius: 10px; border-color: aqua; color: currentcolor; }
+        button,a,li:hover{
+            transition: 0.8s;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div id = "content" class="allcontent"><br/><br/><br/>
+        <div class="input">
+            <h1 id="myName">Al Sakib Ayon</h1>
+            <button id="add" onclick="addStyle()">Add Style</button>
+            <button id="remove" onclick="removeStyle()">Remove Style</button>
+        </div>
+        <div class="change-background">
+            <button id="darkBg" onclick="darkBg()">Dark Background</button>
+            <button id="lightBg" onclick="lightBg()">light Background</button>
+            <button id="defaultBg" onclick="defaultBg()">Default Background</button>
+        </div>
+        <div class="output">
+            <p id="show-output"></p>
+        </div>
+
+        <script>
+            function addStyle(){
+                var stl1 = document.getElementById("myName");
+                stl1.classList.add("text-primary");
+            }
+            function removeStyle(){
+                var rmv1 = document.getElementById("myName");
+                rmv1.classList.remove("text-primary");
+            }
+            function darkBg(){
+                var getData = document.getElementById("content");
+                getData.classList.remove("bg-warning");
+                getData.classList.remove("js-run");
+                getData.classList.add("bg-dark");
+            }
+            function lightBg(){
+                var data = document.getElementById("content");
+                data.classList.remove("bg-dark");
+                data.classList.remove("js-run");
+                data.classList.add("bg-warning");
+            }
+            function defaultBg(){
+                var getName = document.getElementById("content");
+                getName.classList.remove("bg-warning");
+                getName.classList.remove("bg-dark");
+                getName.classList.add("js-run");
+            }
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        body .js-run{
+            color: darkviolet;
+            text-align: center;
+            width: 960px;
+            height: 500px;
+            margin: 0px auto;
+            margin-top: 20px;
+            background-color: whitesmoke;
+            border-radius: 20px;
+        }
+        button,a,li{ padding: 10px 20px; font-size: 0.9rem; background: lightblue;
+        border: 1 px; border-radius: 10px; border-color: aqua; color: currentcolor; }
+        button,a,li:hover{
+            transition: 0.8s;
+            font-size: 1rem;
+        }
+        .input{
+            width: 400px;
+            margin: 0px auto;
+        }
+        ul li{
+            list-style: none;
+            padding:5px;
+            background-color: aquamarine;
+            color: darkorchid;
+            border-radius: 10px;
+            width: 200px;
+            margin: 0px auto;
+            margin-bottom:5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="js-run"><br/><br/><br/>
+        <!-- <div class="show">
+            <button onclick="domDocument()">Dom Document</button>
+            <button onclick="replaceData()">Replace Data</button>
+            <button onclick="newWindow()">New Window</button>
+            <p class="document-show"></p>
+            <p class="document-show"></p>
+            <p class="document-show"></p>
+            <p class="document-show"></p>
+            <p class="document-show"></p>
+        </div> -->
+        <div class="input ">
+            <input type="text" class="form-control add-input" id="input-box" /><br/>
+            <input type="submit" value="Add" id="addition" class="btn btn-outline-primary" onclick="addContent()" /><br/><br/>
+        </div>
+        <div class="output">
+            <ul id="display"></ul>
+        </div>
+        <script>
+            // function domDocument(){
+            //     document.getElementsByClassName("document-show")[0].innerHTML = document.cookie;
+            //     document.getElementsByClassName("document-show")[1].innerHTML = document.lastModified;
+            //     document.getElementsByClassName("document-show")[2].innerHTML = document.title;
+            //     document.getElementsByClassName("document-show")[3].innerHTML = document.domain;
+            //     document.getElementsByClassName("document-show")[4].innerHTML = document.URL;
+            //     // document.getElementsByTagName("p")[0].innerHTML = document.cookie;
+            //     // document.getElementsByTagName("p")[1].innerHTML = document.lastModified;
+            //     // document.getElementsByTagName("p")[2].innerHTML = document.title;
+            // }
+            // function replaceData(){
+            //     document.open("text/html","replace");
+            //     document.write("<h2>This is new Data from DOM</h2>");
+            //     document.close();
+            // }
+            // function newWindow(){
+            //     var s = window.open();
+            //     s.document.open();
+            //     s.document.write("<h2>This is new Window from Dom</h2>");
+            //     s.document.close();
+            // }
+            // function totalClass(){
+            //     var totalClass =  document.getElementsByClassName("document-show").length;
+            //     // var classLength =  totalClass.length;
+            //     alert(totalClass);
+            // }
+            // totalClass();
+        </script>
+        <script>
+
+            function addContent(){
+                var val = document.getElementById("input-box").value;
+
+                var element = document.createElement("li");
+                element.innerHTML = val;
+
+                var store = document.getElementById("display");
+                store.appendChild(element);
+            }
+
+        </script>
+    </div>
+</body>
+</html>

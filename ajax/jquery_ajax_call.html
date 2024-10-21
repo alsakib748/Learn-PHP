@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<style>
+    .simple-form form input{
+       background-color: cadetblue;
+       font-size: 0.9rem;
+       color:aliceblue;
+       padding: 10px;
+    }
+    .simple-form form input:hover{
+        background-color: cornflowerblue;
+        font-size: 1rem;
+        border-radius: 10px;
+        color:darkslategrey;
+    }
+    .show-content{
+        width:100%;
+        height:250px;
+        background-color: lightblue;
+    }
+</style>
+</head>
+<body>
+    
+<div class="container">
+  <div class="all-content mt-5">  
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-3">
+            <div class="simple-form">
+                <h4>Trigger Form</h4>
+                <form action="" method="">
+                    <input type="button" id="send" value="Send Data" />
+                </form>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="show-content">
+                <pre id="result"></pre>
+                <br/>
+                <pre id="extra-message"></pre>
+            </div>   
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+  </div>  
+</div>
+
+</body>
+
+<script>
+    
+    function setData(){
+        let params = {
+            "name":"Al Sakib Ayon",
+            "age":"23",
+            "education":"B.sc in CSE(running)",
+            "email":"ayon2465@gmail.com",
+            "phone":"01608566928",
+            "blood":"A+"
+        };
+        let paramsString = formatParams(params);
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST","jquery_ajax_call.php",true);
+        xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function(){
+            if(this.readyState === 4 && this.status === 200){
+                document.getElementById("result").innerHTML = this.responseText;
+            }
+        }
+
+        xhr.send(paramsString);
+    }
+
+    // function formatParams(data){
+    //     return new URLSearchParams(data).toString();
+    // }
+    function sendDataUsingJquery(){
+        let params = {
+            "name":"Al Sakib Ayon",
+            "age":"23",
+            "education":"B.sc in CSE(running)",
+            "email":"ayon2465@gmail.com",
+            "phone":"01608566928",
+            "blood":"A+",
+            "sender":"Ajax"
+        };
+
+        // $.ajax({
+        //     "method":"POST",
+        //     "url":"jquery_ajax_call.php",
+        //     "data":params
+        // }).done(function(response){
+        //     $("#result").html(response);
+        // });
+
+        // $.post("jquery_ajax_call.php",params,function(response){
+        //     $("#result").html(response);
+        // });
+
+        $.get("jquery_ajax_call.php",params,function(response){
+            $("#result").html(response);
+        });
+    }
+    document.getElementById("send").addEventListener("click",function(){
+        // setData();
+        sendDataUsingJquery();
+    });
+
+</script>    
+<!-- Javascript cdn link -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</html>

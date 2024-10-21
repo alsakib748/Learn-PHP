@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping</title>
+<style>
+    body{
+        color: darkviolet;
+        text-align: center;
+    }
+</style>    
+</head>
+<body>
+    <br/><br/><br/>
+    <!-- For in loop -->
+    <script>
+            // var language = ["html", "css", "javascript", "php", "sql"];
+
+            // for (var item in language) {
+            //     document.write(language[item]+"<br/>");
+            //     // console.log(language[item]);
+            // }
+
+            // var university = ["BUBT","GUB","AUST","NSU","DIU","UIU","IUB"];
+            // for(var data in university){
+            //     document.write(university[data]+"<br/>");
+            // }
+    </script>
+    <!-- print object using for in -->
+    <script>
+        var person = {
+            name:"Al Sakib Ayon",
+            age: 23,
+            hometown: "Barishal,Bangladesh",
+            religion: "Muslim",
+            id: 69463212597
+        };
+        for(var val in person){
+            document.write(person[val]+"<br/>");
+        }
+        document.write("<br/><br/>");
+        var job = {
+            cse:"WD,SD,QA,ML,DS",
+            bba:"marketing,accounting",
+            chamistery: "Chameist",
+            llb: "lawer"
+        };
+
+        for(var value in job){
+            document.write(job[value]+"<br/>");
+        }
+    </script>
+</body>
+</html>

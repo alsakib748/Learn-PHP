@@ -1,0 +1,1 @@
+{"version":1,"defects":{"SampleTest::testSomething":7,"SampleTest::testAnotherThing":7,"CalculatorTest::testSubtractOfTwoNumber":7},"times":{"SampleTest::testSomething":0,"SampleTest::testAnotherThing":0,"CalculatorTest::testAdditionOfTwoNumber":0.004,"CalculatorTest::testAdditionOfMultipleNumbers":0,"CalculatorTest::testSubtractOfTwoNumber":0}}

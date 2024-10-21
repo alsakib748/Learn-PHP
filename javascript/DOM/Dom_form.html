@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        body .js-run{
+            color: darkviolet;
+            text-align: center;
+            width: 960px;
+            height: 500px;
+            margin: 0px auto;
+            margin-top: 20px;
+            background-color: whitesmoke;
+            border-radius: 20px;
+        }
+        button,a,li{ padding: 10px 20px; font-size: 0.9rem; background: lightblue;
+        border: 1 px; border-radius: 10px; border-color: aqua; color: currentcolor; }
+        button,a,li:hover{
+            transition: 0.8s;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="js-run"><br/><br/><br/>
+        <div class="input">
+            <input type="text" id="number1" /><br/><br/>
+            <input type="text" id="number2" /><br/><br/>
+            <button id="submit" onclick="addNumber()">Add</button>
+        </div>
+        <div class="output">
+            <p id="show-output"></p>
+        </div>
+
+        <script>
+            function addNumber(){
+                var num1 = document.getElementById("number1").value;
+                var num2 = document.getElementById("number2").value;
+                // var result = parseFloat(num1) + parseFloat(num2);
+                var result = parseFloat(num1) + parseFloat(num2);
+                document.getElementById("show-output").innerHTML = result;
+            }
+        </script>
+    </div>
+</body>
+</html>

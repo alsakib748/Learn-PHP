@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Data and Time</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        body .js-run{
+            color: darkviolet;
+            text-align: center;
+            width: 960px;
+            height: 500px;
+            margin: 0px auto;
+            margin-top: 20px;
+            background-color: whitesmoke;
+            border-radius: 20px;
+        }
+        button { padding: 10px 20px; font-size: 0.9rem; background: lightblue; border: 1
+px; border-radius: 10px; border-color: aqua; color: currentcolor; }
+
+        button:hover{
+            transition: 0.8s;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="js-run"><br/><br/><br/>
+    <div class="window-button" id="buttons">
+        <button onclick="winAlert()">Alert</button> 
+        <button onclick="winConfirm()">Confirm</button>
+        <button onclick="winPrompt()">Prompt</button>
+        <button onclick="winOpen()">Open</button>
+        <button onclick="winClose()">Close</button>
+    </div>
+        <script>
+            function winAlert(){
+                alert("Message Sent Successfully");
+            }
+            function winConfirm(){
+                let result = confirm("Do you want to delete this message?");
+                document.write(result);
+            }
+            function winPrompt(){
+                let resultPrompt = prompt("What is your name??");
+                document.write(resultPrompt);
+            }
+            function winOpen(){
+                open();
+            }
+            function winClose(){
+                close();
+            }
+            // setTimeout(function(){
+            //     alert("The alert will be next 10 sec");
+            // },10 * 1000);
+
+
+            // setTimeout(function(){
+            //     // prompt("What is your name");
+            //     document.getElementById("buttons").hide();
+            // },5 * 1000);
+            setTimeout(function(){
+                document.write("Hello JS World");
+            },3 * 1000);
+            // <?php if($resultPrompt){echo $resultPrompt;} ?>
+        </script>
+    </div>
+</body>
+</html>

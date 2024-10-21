@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Build in function</title>
+    <style>
+        body {
+            color: darkviolet;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Javascript Concate Method -->
+    <script>
+        // var alp1 = ["A", "B", "C", "D"];
+        // var alp2 = ["E", "F", "G", "H"];
+        // var alp3 = alp2.concat(alp1);
+        // document.write(alp3+"<br/><br/>");
+            
+        // var chr = ['Q','W','E','R','T','Y'];
+        // var num = [1,2,3,4,5,6];
+        // var numChr = chr.concat(num);
+        // document.write(numChr);
+    </script>
+    <!-- Javascript array from method -->
+    <script>
+        // var str = "Al Sakib Ayon";
+        // var arrayStr = Array.from(str);
+        // document.write(arrayStr+"<br/><br/>");
+        // for(var val in arrayStr){
+        //     document.write(arrayStr[val]+"\n");
+        // }
+        // document.write("<br/><br/>");
+
+        // var msg = "A quick brown fox jumps over the lazy dog";
+        // var arrayMsg = Array.from(msg);
+        // for(var i=0;i<arrayMsg.length;i++){
+        //     document.write(arrayMsg[i]+"\n");
+        // }
+        //     document.write("<br/><br/>");
+        // var num = "123456787";
+        // var arrayNum = Array.from(num);
+        // for(var i=0;i<arrayNum.length;i++){
+        //     document.write(arrayNum[i]+"\n");
+        // }
+    </script>
+    <!-- Javascript array filter method -->
+    <script>
+        // var num = [10,20,25,38,45,56,68,70,84,96];
+        // var numResult = num.filter(function(item){
+        //     return item > 50;
+        // });
+        // document.write(numResult+"<br/>");
+        // var numResult2 = num.filter(function(item){
+        //     return item < 50;
+        // });
+        // document.write(numResult2+"<br/><br/>");
+        // var chr = ['a','b','c','d','e','f','g','h','i','j','k','k'];
+        // var arrayChr = chr.filter(function(c){
+        //     return c > 'e';
+        // });
+        // document.write(arrayChr+"<br/><br/>");
+        // var arrayChr2 = chr.filter(function(ch){
+        //     return ch < 'e';
+        // });
+        // document.write(arrayChr2);
+    </script>
+    <!-- Javascript find and findIndex method -->
+    <script>
+        // var num = [10,15,20,25,30,35,40,45,50,55,60,65,70,75,80];
+        // numFind = num.findIndex(function(item){
+        //     return item < 50;
+        // });    
+        // document.write(numFind+"<br/><br/>");
+
+        // var chr = ['a','b','c','d','e','f','g','h','i'];
+        // var findChr = chr.findIndex(function(chr){
+        //     return chr == 'e';
+        // });
+        // document.write(findChr);
+    </script>
+    <!-- Javascript foreach function -->
+    <script>
+        // var num = [10,20,30,40,50,60,70,80,90];
+        // num.forEach(function(item){
+        //     document.write(item+"<br/>");
+        // });
+        //     document.write("<br/><br/>");
+        // var str = ["sakib","ayon","shakil","foysal","sabbir","rakib"];
+        // str.forEach(function(value){
+        //     document.write(value+"<br/>");
+        // });
+        // document.write("<br/><br/>");
+        // var chr = ['A','B','C','D','E','F'];
+        // chr.forEach(function(val){
+        //     document.write(val+"<br/>");
+        // });
+    </script>
+    <!-- Javascript includes and indexOf function -->
+    <script>
+        // var num = [10,20,30,40,50,60,70,80];
+        // // var isNum = num.includes(50);
+        // // var isNum = num.includes(99);
+        // // document.write(isNum+"<br/>");
+        // // var isNumIndex = num.indexOf(45);
+        // // document.write(inNumIndex);
+
+        // var str = ["ayon","sakib","foysal","sabbir","rakib"];
+        // var strResult = str.indexOf("Sakib");
+        // // document.write(strResult);
+
+        // var chr = ['A','B','C','D','E','F','G'];
+        // var chrResult = chr.includes('d');
+        // var chrIndex = chr.indexOf('I');
+        // // document.write(chrIndex);
+
+        // var n = [1,2,3,4,5,6,7,8,9];
+        // var nResult = n.includes(9);
+        // document.write(nResult);
+    </script>
+    <!-- Javascript reverse() and pop() and push() function -->
+    <script>
+        // var num = [10,20,30,40,50];
+        // // num.reverse();
+        // num.push(60);
+        // num.pop();
+        // num.pop();
+        // num.reverse();
+        // document.write(num+"<br/>");
+
+        // var chr = ['A','B','C','D','E'];
+        // // chr.reverse();
+        // chr.push('F');
+        // chr.push('G');
+        // chr.pop();
+        // chr.pop();
+        // chr.pop();
+        // document.write(chr+"<br/>");
+
+        // var str = ["ayon","sakib","foysal","shakil","rakib"];
+        // // str.reverse();
+        // str.pop();
+        // str.pop();
+        // str.push("shifat");
+        // str.push("rimon");
+        // document.write(str);
+    </script>
+    <!-- Javascript sort() asc & desc and slice() -->
+    <script>
+        // var num = [25,34,15,87,55,89,61,78];
+        // num.sort();
+        // // num.sort().reverse();
+        // var sliceResult = num.slice(2,5);
+        // document.write(sliceResult+"<br/>");
+
+        // var chr = ['F','I','B','E','A'];
+        // // chr.sort().reverse();
+        // // var sliceChr = chr.slice(1,4);
+        // var cut = chr.slice(0,6);
+        // document.write(cut+"<br/>");
+
+        // var str = ["sakib","ayon","shakil","shifat","rakib"];
+        // str.sort().reverse();
+        // // var strSlice = str.slice(1,3);
+        // document.write(str);
+    </script>
+    <!-- Javascript splice() function -->
+    <script>
+        // var num = [10,20,30,40,50,60];
+        // // num.splice(2,2);
+        // num.splice(2,0,28);
+        // document.write(num+"<br/>");
+
+        // var chr = ['A','B','C','D','E'];
+        // chr.splice(2,3);
+        // chr.splice(2,0,'S','K','L');
+        // document.write(chr+"<br/>");
+
+        // var str = ["sakib","ayon","rakib","shakil","sabbir"];
+        // str.splice(3,2);
+        // str.splice(3,0,"hasan","ali","tarek");
+        // document.write(str);
+    </script>
+    <!--  -->
+</body>
+
+</html>

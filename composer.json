@@ -1,0 +1,7 @@
+{
+    "require": {
+        "sunra/php-simple-html-dom-parser": "^1.5",
+        "phpseclib/phpseclib": "^3.0",
+        "predis/predis": "^2.2"
+    }
+}
